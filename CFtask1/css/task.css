@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.forminput input{
+    width: 250px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500px;
+    border-radius: 4px;
+}
+
+#textbox{
+    width: 400px;
+}
+
+#submit{
+    background-color: lavender;
+    width: 100px;
+}
+
+#submit:hover{
+    background-color: gainsboro;
+}

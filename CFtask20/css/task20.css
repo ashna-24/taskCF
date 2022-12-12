@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forminput{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.forminput input{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.image{
+    margin:0px 0px 20px 100px;
+
+}
+
+#submit{
+    background-color: lavender;
+    width: 100px;
+    margin:0px 0px 20px 100px;
+}
+
+#submit:hover{
+    background-color: gainsboro;
+}
