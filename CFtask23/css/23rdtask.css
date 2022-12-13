@@ -43,7 +43,7 @@ body{
     padding: 10px 0px;
 }
 
-.wfformhover:hover{
+.wfformhover:focus-within{
     background-color:#fff7c0;
 }
 

@@ -15,13 +15,16 @@
                     <textarea class="text" rows="4" cols="50" name="description"></textarea><br>
                     <label>Select file</label><br>
                     <input type="file"  name="file"><br>
-                    the image should not greater than 1 MB<br>
+                    The image should not greater than 1 MB<br>
                     <cfinvoke  method="textField" component="compoents/task14" returnVariable="session.location"> 
                     <input type="submit" value="submit" class="text" name="submit">
                     <a href="index14.cfm"> <cfimage source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#" name="myImage" action="writeToBrowser"></a>    
-                    <cfdump  var="#session.location#">
                     <br> 
                 </form>
+                <cfreturn "#session.location#">
+                <cfreturn "#session.sizeKB#">
+                <cfreturn "#session.name#">
+                <cfreturn "#session.description#">    
             </div>
         </cfoutput>
     </body>

@@ -8,27 +8,31 @@
                 <cfif len(trim(form.file))>
                     <cffile action="upload" fileField="file" nameConflict="overwrite" accept="image/jpg,image/jpeg,image/gif,image/png" result="thisResult" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\">
                     <cfset session.size = thisResult["filesize"]>
-                    <cfset session.location = #thisResult.serverFile#>
+                    <cfset session.location = "#thisResult.serverFile#">
                     <cfif session.size gte 1024000>
                         <cfscript>
                             try{
                                 fileDelete(thisResult["serverfile"]);
                             }
                             catch(any e){
-                                writeOutput("file is greater than 1 MB! please upload again ");
+                                writeOutput("File is greater than 1 MB! Please upload again");
                             }
                         </cfscript>
                     <cfelse>
                         <p>Thankyou, your file has been uploaded.</p>
-                        <cfimage action="resize" width="20" height="20" source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\#session.location#" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#"  overwrite="true">
-                    </cfif>    
-                </cfif>    
+                        <cfimage action="resize" width="20" height="20" source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#"  overwrite="true">
+                    </cfif> 
+                    <cfset session.sizeKB = "#session.size#"/1000>   
+                </cfif>
+                <cfreturn "#session.location#">
+                <cfreturn "#session.sizeKB#">
+                <cfreturn "#session.name#">
+                <cfreturn "#session.description#">    
             </cfif>
-            <cfset session.sizeKB = #session.size#/1000>
             <cfreturn "#session.location#">
             <cfreturn "#session.sizeKB#">
             <cfreturn "#session.name#">
-            <cfreturn "#session.description#">
+            <cfreturn "#session.description#">        
         </cflock>
     </cffunction>
 </cfcomponent>
