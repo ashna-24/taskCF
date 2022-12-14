@@ -13,7 +13,9 @@
                     <input type="text" name="text1" id="text1">
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
-            </div>    
+            </div>  
+            Name in position "#variable#" is "#FirstName#"
+            "#empQuery.FirstName#" "#empQuery.LastName#"  
         </cfoutput>
     </body>
 </html>

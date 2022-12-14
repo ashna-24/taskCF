@@ -15,6 +15,10 @@
                     <input type="submit" name="submit" value="Submit" id="submit">
                 </form>
             </div>
+            Users age is: "#age#" <br>
+            At age "#MomAge#" his mother delivered him. <br>
+            "#daystill#" remaining for child's birthday <br>
+            "#daystillM#" remaining for Mother's birthday.
         </cfoutput>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <cfcomponent>
     <cffunction name="count" access="remote">
-        <cfif isDefined('submit')>
+        <cfif structKeyExists(form, "submit")>
  	        <cfif isDefined("Cookie.cookieCounter") eq false>
                 <cfcookie name="cookieCounter" value=1>
             </cfif>

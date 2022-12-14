@@ -5,13 +5,12 @@
             <cfset count=0>
             <cfset array= ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]>
             <cfloop from="1" to="#arrayLen(array)#" index="i">
-                <cfif #textvar# eq #array[i]#>
+                <cfif textvar eq array[i]>
                     <cfset count = #count# + 1>
                 </cfif>
             </cfloop>
-            <cfoutput>
-                "#textvar#" key word found in #count# times!
-            </cfoutput>
+            <cfreturn "#textvar#">
+            <cfreturn "#count#">
         </cfif>
     </cffunction>
 </cfcomponent>

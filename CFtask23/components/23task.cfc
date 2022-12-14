@@ -2,7 +2,7 @@
     <cffunction  name="getFormdata" access="remote">
         <cfif structKeyExists(form, "submit")>
             <cfquery name="form" datasource="wufoo">
-                insert into form values('#form.option#',
+                INSERT INTO form VALUES('#form.option#',
                                         '#form.date#',
                                         '#form.url#',
                                         '#form.firstname#',

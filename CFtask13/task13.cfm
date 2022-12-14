@@ -15,6 +15,7 @@
                 </form>
                 <cfinvoke  method="getArrayChar" component="components/task13"> 
             </div>
+            ""#textvar#"" key word found in "#count#" times!
         </cfoutput>
     <body>
 <html>

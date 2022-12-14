@@ -13,7 +13,8 @@
                     <input type="text" name="text1" id="text1">
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
-            </div>    
+            </div> 
+            <cfreturn "#i#">   
         </cfoutput>
     </body>
 </html>

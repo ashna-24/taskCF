@@ -5,11 +5,9 @@
             <cfset arr = rematch("[\d]+",data)>
             <cfloop array="#arr#" index="i">
                 <cfif (i % 3) eq 0>
-                    <cfoutput>
-                        #i#
-                    </cfoutput>
-                    <cfcontinue>                    
-                </cfif>                                
+                    <cfreturn "#i#">
+                    <cfcontinue>
+                </cfif>                   
             </cfloop>
        </cfif>
     </cffunction>

@@ -9,9 +9,7 @@
                         <cfelse>
                             <cfset i="<font color=Blue>#i#</font>">
                     </cfif>
-                    <cfoutput>
-                        #i# 
-                    </cfoutput>
+                        <cfreturn "#i#"> 
                 </cfloop>    
             <cfelse>
                 Invalid number! Please enter valid number!

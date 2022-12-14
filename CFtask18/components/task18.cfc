@@ -7,7 +7,7 @@
                 {ID=2, Name="Ram Prakash", Email="ramprakash@gmail.com"},
                 {ID=3, Name="Narveen K A", Email="narveenka@gmail.com"}
             ]);
-            writeDump(queryData)
+            writeDump(queryData);
          </cfscript>
     </cffunction>
 </cfcomponent>

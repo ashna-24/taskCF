@@ -12,10 +12,10 @@
                 <form action="task3.cfm" method="post" class="forminput">                
                     <input type="text" name="textinput" id="textbox">
                     <input type="submit" value="Submit" id="submit" name="submit">
-                    <cfinvoke  method="divisible" component="components/task3" returnVariable="arrval">
+                    <cfinvoke  method="divisible" component="components/task3" returnVariable="i">
                 </form>               
             </div>
-           <!---  #arrval# --->
+            "#i#"
         </cfoutput>
     </body>
 </html>

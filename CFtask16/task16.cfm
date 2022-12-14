@@ -12,6 +12,7 @@
                     <cfinvoke  method="textField" component = "components/task16">    
                 </form>
             </div>
+            <cfreturn "#Result[i][j]#">
         </cfoutput>
     </body>
 </html>

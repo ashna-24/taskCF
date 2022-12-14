@@ -2,21 +2,19 @@
     <cffunction  name="getSQL" access="remote">
         <cfif structKeyExists(form, "submit")>
             <cfset variable=form.text1>
-            <cfif #variable# lte 10>
+            <cfif variable lte 10>
                 <cfquery datasource="employee" name="empQuery">
-                    select * from employee;
+                    SELECT * 
+                    FROM employee;
                 </cfquery>
-                <cfelse>
-                    Invalid input!    
+            <cfelse>
+                Invalid input!    
             </cfif>
-            <cfloop query="empQuery" startRow="#variable#" endRow="#variable#">
-                <cfoutput> 
-                    Name in position #variable# is #FirstName# <br><br>
-                </cfoutput>
+            <cfloop query="empQuery" startRow="#empQuery.variable#" endRow="#empQuery.variable#"> 
+                <cfreturn "#empQuery.variable#">
+                <cfreturn "#empQuery.FirstName#">
             </cfloop>
-            <cfoutput query="empQuery">
-                    #FirstName# #LastName#<br>
-            </cfoutput>
+            <cfreturn "#empQuery.FirstName#"> <cfreturn "#empQuery.LastName#">
         </cfif>
     </cffunction>
 </cfcomponent>

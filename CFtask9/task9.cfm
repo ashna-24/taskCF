@@ -15,7 +15,8 @@
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                     <cfinvoke  method="getStruct" component="components/task9">
                 </form> 
-            </div>    
+            </div>
+            The text "#v#" is already present. Cannot add again    
         </cfoutput>
     </body>
 </html>
