@@ -7,13 +7,16 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke  method="getDate" component="components/task4" returnVariable="Date">
-            Today's date #Date# <br>
-            Month in numeric #numMonth# <br>
-            Month in words #wordMonth# <br>
-            Last friday date #lastDay# <br>
-            Last day of the month #lastM# <br>
-            #Fivedays#
+            <cfif structKeyExists(form, 'submit')>
+                <cfinvoke  method="getDate" component="components/task4" returnVariable="Date">
+                <!--- Today's date #Date# <br>
+                Month in numeric #numMonth# <br>
+                Month in words #wordMonth# <br>
+                Last friday date #lastDay# <br>
+                Last day of the month #lastM# <br>
+                #Fivedays# --->
+            </cfif>
+            <cfset structClear("#form#")>
         </cfoutput>
     </body>
 </html>

@@ -15,7 +15,7 @@
                     <cfinvoke  method="divisible" component="components/task3" returnVariable="i">
                 </form>               
             </div>
-            "#i#"
+           <!--- <cfreturn "#i#"> --->
         </cfoutput>
     </body>
 </html>

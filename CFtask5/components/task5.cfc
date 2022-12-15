@@ -32,10 +32,12 @@
                 <cfset daystill=dateDiff("d", now(), day)>
                 <cfset daystillM=dateDiff("d", now(), dayM)>
             </cfif>
-            <cfreturn "#age#">
-            <cfreturn "#MomAge#">
-            <cfreturn "#daystill#">
-            <cfreturn "#daystillM#">
+            <cfoutput>
+                Users age is: "#age#" <br>
+                At age "#MomAge#" his mother delivered him. <br>
+                "#daystill#" remaining for child's birthday <br>
+                "#daystillM#" remaining for Mother's birthday.
+            </cfoutput>
         </cfif>
     </cffunction>
 </cfcomponent>

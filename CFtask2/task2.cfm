@@ -11,6 +11,7 @@
             <cfif structKeyExists(form,"submit")>
                 <cfinvoke  method="getNumbers" component="components/task2">
             </cfif>
+            <cfset structClear("#form#")>
             <div class="main">
                 <form action="task2.cfm" method="post" class="forminput">                
                     <input type="text" name="textinput" id="textbox">
