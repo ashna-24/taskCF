@@ -8,13 +8,16 @@
     </head>
     <body>
         <cfoutput>
+            <cfif structKeyExists(form,'submit')>
+                <cfinvoke  method="getEvenOdd" component="components/task17">
+            </cfif>
+            <cfset structClear(form)>
             <div class="main">
-                <form action="components/task17.cfc?method=getEvenOdd" method="post" name="myform" autocomplete="off" class="forminput">
+                <form action="task17.cfm" method="post" name="myform" autocomplete="off" class="forminput">
                     <input type="text" name="text1" id="text1">
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
-            </div> 
-            <cfreturn "#i#">   
+            </div>    
         </cfoutput>
     </body>
 </html>

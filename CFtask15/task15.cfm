@@ -7,13 +7,9 @@
         <title></title>
     </head>
     <body>
-        <cfoutput>
-            <div class="main">                
-                <form action="task15.cfm" method="post">  
-                    <cfobject component="components/task15" name="multiplyValues" type="component" action="Create" >
-                    <cfinvoke  method="getOutput" component="components/task15">                  
-                </form>
-            </div>
+        <cfoutput> 
+            <cfobject component="components/task15" name="multiplyValues" type="component" action="Create" >
+            <cfinvoke  method="getOutput" component="components/task15">                
         </cfoutput>
     </body>
 </html>

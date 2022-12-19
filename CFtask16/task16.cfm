@@ -7,11 +7,7 @@
     </head>
     <body>
         <cfoutput>
-            <div class="mainBody">
-                <form action="task16.cfm" method="post" name="myform">
-                    <cfinvoke  method="textField" component = "components/task16">    
-                </form>
-            </div>
+            <cfinvoke  method="textField" component = "components/task16">    
             <cfreturn "#Result[i][j]#">
         </cfoutput>
     </body>

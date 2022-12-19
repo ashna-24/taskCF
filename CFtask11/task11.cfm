@@ -8,11 +8,8 @@
     </head>
     <body>
         <cfoutput>
-            <div class="main">
-                <form action="task11.cfm" method="post">
-                    <cfinvoke  method="getOutput" component="components/task11">
-                </form>
-            </div>
+            <cfinvoke  method="getOutput" component="components/task11">
+            <cfset structClear("#form#")> 
         </cfoutput>
     </body>
 </html>

@@ -1,11 +1,9 @@
 <cfcomponent>
     <cffunction name="getStruct" access="remote">
-        <cfif structKeyExists(form,'submit')>
-            <cfscript>
-                Struct=StructNew();
-                struct[form.text1]=form.text2;
-            </cfscript>
-            <cfdump  var="#Struct#">
-        </cfif>
+        <cfargument  name="keyText" type="string" default="#form.text1#">
+        <cfargument  name="valueText" type="string" default="#form.text2#">
+        <cfset myStruct=StructNew()>
+        <cfset myStruct[arguments.keyText]=arguments.valueText>
+        <cfdump  var="#myStruct#">
     </cffunction>
 </cfcomponent>

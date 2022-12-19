@@ -7,6 +7,10 @@
     </head>
     <body>
         <cfoutput>   
+            <cfif structKeyExists(form,'submit')>
+                <cfinvoke  method="textField" component="compoents/task14" returnVariable="session.location"> 
+            </cfif> 
+            <cfset structClear("#form#")> 
             <div class="mainBody">
                 <form action="task14.cfm" method="post" enctype="multipart/form-data">            
                     <label>Image name</label><br>
@@ -16,7 +20,6 @@
                     <label>Select file</label><br>
                     <input type="file"  name="file"><br>
                     The image should not greater than 1 MB<br>
-                    <cfinvoke  method="textField" component="compoents/task14" returnVariable="session.location"> 
                     <input type="submit" value="submit" class="text" name="submit">
                     <a href="index14.cfm"> <cfimage source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#" name="myImage" action="writeToBrowser"></a>    
                     <br> 
