@@ -5,18 +5,18 @@
         <cfreturn this>
     </cffunction> 
     <cffunction  name="getWordString" access="remote">
-    <cfdump  var="#form#">
         <cfset textData="#mytext#">
         <cfset keyText=0>
         <cfloop list="#textData#" delimiters=" .;" index="i">
             <cfset keyText= keyText+1>
             <cfset ValueText = "#i#">
             <cfif not isNumeric(i)>
-                <cfset struct=structNew("Ordered")>
                 <cfif not isDefined("struct")>
+                    <cfset struct=structNew("Ordered")>
+                    <cfset textvar=structInsert(struct, "#keyText#", "#valueText#")>
+                <cfelse>
                     <cfset textvar=structInsert(struct, "#keyText#", "#valueText#")>
                 </cfif>
-                <cfset textvar=structInsert(struct, "#keyText#", "#valueText#")>
             </cfif>
         </cfloop>
         <cfreturn struct>

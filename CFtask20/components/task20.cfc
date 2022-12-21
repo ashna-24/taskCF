@@ -14,10 +14,12 @@
 	    <cfreturn result>
     </cffunction>
     <cffunction name="getCaptcha" access="remote">
+        <cfargument  name="captchaform" type="any" default="#form.captcha#">
+        <cfargument  name="captchatextform" type="any" default="#form.captchatext#">
         <cfif structKeyExists(form, 'submit')>
-            <cfset variable = form.captcha>
+            <cfset variable = arguments.captchaform>
             <cfset captch = makeRandomString()>
-            <cfset hidvar = form.captchatext>
+            <cfset hidvar = arguments.captchatextform>
             <cfif hidvar eq variable>
                 <cfreturn "Email Address successfully subscribe our newsletter!">
             <cfelse>

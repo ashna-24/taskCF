@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainBody{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.text{
+    padding: 5px;
+}
+
+.name{
+    margin-bottom: 20px;
+}
+
+.file{
+    margin: 20px 0px;
+}
