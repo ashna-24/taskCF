@@ -9,8 +9,8 @@
     <body>
         <cfoutput>
             <div class="main">
-                <form action="count.cfc?method=getCount" method="post" autocomplete="off" name="myform">
-                    <textarea name="text" cols="50" rows="5" id="text"></textarea>
+                <form action="count.cfc?method=getCount" method="post" autocomplete="off" name="myform" enctype="multipart/form-data">
+                    <input type="file" name="fileupload" id="fileupload">
                     <input type="submit" name="submit" id="submit">
                 </form>
                 <cfobject  name="textObj" type="component" component="tagCloud" action="Create">

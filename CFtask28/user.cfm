@@ -21,7 +21,7 @@
                         FROM pagesDtl
                     </cfquery>
                     <cfloop query="pageDtlList">
-                        <a href="displaypage.cfm?name=<cfoutput>#pageDtlList.pagename#</cfoutput>"><cfoutput>#pageDtlList.pagename#</cfoutput></a>
+                        <a href="displaypage.cfm?name=#pageDtlList.pagename#">#pageDtlList.pagename#</a>
                     </cfloop>
                 </div>
             <cfelse>

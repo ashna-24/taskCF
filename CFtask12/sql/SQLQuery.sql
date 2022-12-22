@@ -14,4 +14,3 @@ insert into employee values('Ashna','F Raj'),
 						   ('Aiswarya','Vijayan'),
 						   ('Chithra','S'),
 						   ('Arjun','Krishna');
-

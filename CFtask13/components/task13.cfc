@@ -9,6 +9,8 @@
                 <cfset count = #count# + 1>
             </cfif>
         </cfloop>
-        <cfreturn "#count#">
+        <cfoutput>
+            The key word found in "#count#" times!
+        </cfoutput>
     </cffunction>
 </cfcomponent>

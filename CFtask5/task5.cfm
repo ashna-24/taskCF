@@ -9,16 +9,20 @@
     <body>
         <cfoutput>
             <div class="main">
-                <form action="components/task5.cfc?method=getAge" method="post" autocomplete="off" name="myform">
+                <form action="" method="post" autocomplete="off" name="myform">
                     Enter Child DOB<input type="date" name="date" id="date">
                     Enter Mother's DOB<input type="date" name="mother" id="mother">
                     <input type="submit" name="submit" value="Submit" id="submit">
                 </form>
             </div>
-           <!---  Users age is: "#age#" <br>
-            At age "#MomAge#" his mother delivered him. <br>
-            "#daystill#" remaining for child's birthday <br>
-            "#daystillM#" remaining for Mother's birthday. --->
+            <cfif structKeyExists(form, "submit")>
+                <cfinvoke  method="getAge" component="components/task5" returnVariable="ageStruct">
+                Users age is: "#ageStruct.UsersAge#" <br>
+                At age "#ageStruct.MotherDeliveredHim#" his mother delivered him. <br>
+                "#ageStruct.childBirthday#" remaining for child's birthday <br>
+                "#ageStruct.MotherBirthday#" remaining for Mother's birthday.
+                <cfset structClear("#form#")>
+            </cfif>
         </cfoutput>
     </body>
 </html>

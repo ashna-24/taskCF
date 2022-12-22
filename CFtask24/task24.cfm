@@ -18,7 +18,7 @@
                 </form>
             </div>
         </cfoutput>
-        <script src="assets/jquery.js"></script>
+        <script src="assets/jquery.min.js"></script>
         <script src="js/task24.js"></script>    
     </body>
 </html>

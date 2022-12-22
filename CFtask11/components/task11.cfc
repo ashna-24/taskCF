@@ -12,6 +12,6 @@
         <cfargument name="x" required="yes">
         <cfargument name="y" required="yes" default="1">
         <cfargument name="z" required="yes" default="1">
-        <cfreturn w*x*y*z>
+        <cfreturn arguments.w*arguments.x*arguments.y*arguments.z>
     </cffunction>
 </cfcomponent>

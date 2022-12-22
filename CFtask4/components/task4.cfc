@@ -1,5 +1,5 @@
 <cfcomponent>
-    <cffunction  name="getDate" access="remote">
+    <cffunction  name="getDate" access="remote" returnType="struct">
         <cfset Date= dateFormat("#now()#")>
         <cfset Month= dateFormat("#now()#", "mm")>
         <cfset numMonth= month(Date)>
@@ -8,8 +8,15 @@
         <cfset Friday =(6- week)-7>
         <cfset lastFriday= dateAdd("d", Friday, Date)>
         <cfset lastDay = dateFormat("#lastFriday#")>
-        <cfset Lastmonth= dateAdd("d", -1, dateAdd("m", 1 , Date)-1)>
+        <cfset Lastmonth= dateAdd("d", 10, dateAdd("m", 0 , Date)-1)>
         <cfset lastM = dateFormat("#Lastmonth#")>
+        <cfset dateStruct=structNew()>
+        
+        <cfset dateStruct.TodaysDate = "#Date#">
+        <cfset dateStruct.MonthInNumeric="#numMonth#">
+        <cfset dateStruct.MonthInWords = "#wordMonth#">
+        <cfset dateStruct.LastFridayDate= "#lastDay#">
+        <cfset dateStruct.LastDayofTheMonth ="#lastM#">
 
         <cfloop from="1" to="5" index="i">
             <cfset Fivedays= dateFormat(dateAdd("d", -i, Date), "dd-mmm-yyyy - dddd")>
@@ -40,12 +47,8 @@
                     Invalid Number!
                 </cfdefaultcase>
             </cfswitch>
+            <cfset structInsert(dateStruct, "#i#", "#Fivedays#")>
         </cfloop>
-        <cfreturn "#Date#">
-        <cfreturn "#numMonth#">
-        <cfreturn "#wordMonth#">
-        <cfreturn "#lastDay#">
-        <cfreturn "#lastM#">
-        <cfreturn "#Fivedays#">
+        <cfreturn dateStruct>
     </cffunction>
 </cfcomponent>

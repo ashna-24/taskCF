@@ -18,7 +18,7 @@
                     <input type="submit" id="submit" name="submit">
                 </form> 
             </div>
-            The key word found in "#result#" times!
+            <!--- The key word found in "#result#" times! --->
         </cfoutput>
     <body>
 <html>

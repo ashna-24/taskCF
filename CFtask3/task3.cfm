@@ -12,9 +12,13 @@
                 <form action="task3.cfm" method="post" class="forminput">                
                     <input type="text" name="textinput" id="textbox">
                     <input type="submit" value="Submit" id="submit" name="submit">
-                    <cfinvoke  method="divisible" component="components/task3" returnVariable="i">
                 </form>               
             </div>
+            <cfif structKeyExists(form, "submit")>
+                <cfinvoke  method="divisible" component="components/task3" returnVariable="struct.value">
+                #struct.value#
+                <cfset structClear(form)>
+            </cfif>
            <!--- <cfreturn "#i#"> --->
         </cfoutput>
     </body>

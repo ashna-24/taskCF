@@ -4,6 +4,6 @@
         <cfargument  name="valueText" type="string" default="#form.text2#">
         <cfset myStruct=StructNew()>
         <cfset myStruct[arguments.keyText]=arguments.valueText>
-        <cfdump  var="#myStruct#">
+        <cfreturn myStruct>
     </cffunction>
 </cfcomponent>

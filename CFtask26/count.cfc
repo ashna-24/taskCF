@@ -2,7 +2,15 @@
     <cffunction  name="getCount" access="Remote">
         <!--- <cfdump  var="#form#"> --->
         <cftry>
-            <cfset textObj=createObject("component", "tagCloud").getText(mytext="#text#")>
+	        <cftry>
+                <cffile action="upload" fileField="fileupload" nameConflict="overwrite" result="thisResult" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask26\assets\">
+                <cfset local.location = #thisResult.serverFile#>
+                <cffile action="read" file="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask26\assets\#local.location#" variable="fieldList">
+            <cfcatch type = "any">
+                <cflocation  url="index.cfm" addtoken="no">
+            </cfcatch>
+            </cftry>
+            <cfset textObj=createObject("component", "tagCloud").getText(mytext="#fieldList#")>
             <cfset resObj="#textObj.getWordString()#"> 
             <cfloop item="word" collection="#resObj#">
                 <cfquery name="textQuery" datasource="employee">

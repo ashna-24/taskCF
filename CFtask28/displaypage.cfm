@@ -12,7 +12,7 @@
                 <cfquery name="display" datasource="employee">
                     SELECT pagedescs 
                     FROM pagesDtl
-                    WHERE pagename='#url.name#'
+                    WHERE pagename=<cfqueryparam value='#url.name#' cfsqltype="CF_SQL_VARCHAR">
                 </cfquery>
                 <div class="main">
                     <span>Page Name:</span>

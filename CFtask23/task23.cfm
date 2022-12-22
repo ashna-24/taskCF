@@ -22,7 +22,9 @@
                             <p>Infinity Box Inc.</p>
                         </div>                        
                         <div class="form">
-                            <cfinvoke  method="getFormdata" component="components/23task">
+                            <cfif structKeyExists(form, "submit")>
+                                <cfinvoke  method="getFormdata" component="components/23task">
+                            </cfif>
                             <form action="task23.cfm" method="post" class="wfform" name="myform" onsubmit="return validateform()">
                                 <div class="select wfformhover">
                                     <h3 class="textsize"> Which position are you applying for?<span class="red">*</span></h3>

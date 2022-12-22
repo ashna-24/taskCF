@@ -6,10 +6,12 @@
             <cfloop from="1" to="#num#" index="i">
                 <cfif  (i % 2) eq 0>
                     <cfset i="<font color=Green>#i#</font>">
-                    <cfelse>
-                        <cfset i="<font color=Blue>#i#</font>">
+                <cfelse>
+                    <cfset i="<font color=Blue>#i#</font>">
                 </cfif>
-                <cfreturn "#i#"> 
+                <cfoutput> 
+                    #i# 
+                </cfoutput>
             </cfloop>    
         <cfelse>
             Invalid number! Please enter valid number!

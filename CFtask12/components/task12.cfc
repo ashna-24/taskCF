@@ -4,7 +4,7 @@
         <cfif structKeyExists(form, "submit")>
             <cfset variable=arguments.keyText>
             <cfif variable lte 10>
-                <cfquery datasource="employee" name="empQuery">
+                <cfquery datasource="querytab" name="empQuery">
                     SELECT * 
                     FROM employee;
                 </cfquery>

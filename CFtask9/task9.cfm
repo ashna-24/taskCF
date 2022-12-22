@@ -9,7 +9,8 @@
     <body>
         <cfoutput>
             <cfif structKeyExists(form,'submit')>
-                <cfinvoke  method="getStruct" component="components/task9" returnVariable="result">
+                <cfinvoke  method="getStruct" component="components/task9" returnVariable="session.myStruct">
+                The text "#session.myStruct#" is already present. Cannot add again....  
             </cfif> 
             <cfset structClear("#form#")> 
             <div class="main">
@@ -19,7 +20,6 @@
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
             </div>
-            The text "#result#" is already present. Cannot add again....  
         </cfoutput>
     </body>
 </html>
