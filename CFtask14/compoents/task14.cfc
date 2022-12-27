@@ -6,7 +6,7 @@
         <cfset session.name= arguments.name>
         <cfset session.description= arguments.description>
         <cfif len(trim(arguments.file))>
-            <cffile action="upload" fileField="file" nameConflict="overwrite" accept="image/jpg,image/jpeg,image/gif,image/png,image/webp" result="thisResult" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\">
+            <cffile action="upload" fileField="file" nameConflict="overwrite" accept="image/jpg,image/jpeg,image/gif,image/png,image/webp" result="thisResult" destination="#expandpath(".\assets")#">
             <cfset session.size = thisResult["filesize"]>
             <cfset session.location = "#thisResult.serverFile#">
             <cfif session.size gte 1024000>
@@ -18,7 +18,7 @@
                 </cftry>
             <cfelse>
                 <p>Thankyou, your file has been uploaded.</p>
-                <cfimage action="resize" width="20" height="20" source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\#session.location#" destination="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#"  overwrite="true">
+                <cfimage action="resize" width="20" height="20" source="#expandpath(".\assets\#session.location#")#" destination="#expandpath(".\assets\fileresize\#session.location#")#"  overwrite="true">
             </cfif> 
             <cfset session.sizeKB = "#session.size#"/1000>   
         </cfif>  

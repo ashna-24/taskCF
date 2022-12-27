@@ -1,25 +1,21 @@
 <cfcomponent>
     <cffunction name="makeRandomString" returnType="string" output="false">
-	    <cfset var chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz">
-	    <cfset var length = randRange(6,6)>
-	    <cfset var result = "">
-	    <cfset var i = "">
-	    <cfset var char = "">
-	    <cfscript>
-	        for(i=1; i <= length; i++) {
-		        char = mid(chars, randRange(1, len(chars)),1);
-		        result&=char;
-	        }
-	    </cfscript>	
-	    <cfreturn result>
+	    <cfset var local.chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz">
+	    <cfset var local.length = randRange(6,6)>
+	    <cfset var local.result = "">
+        <cfloop from="1" to="#local.length#" index="i">
+            <cfset local.char= mid(local.chars, randRange(1, len(local.chars)), 1)>
+            <cfset local.result&=local.char>
+        </cfloop>
+	    <cfreturn local.result>
     </cffunction>
     <cffunction name="getCaptcha" access="remote">
         <cfargument  name="captchaform" type="any" default="#form.captcha#">
         <cfargument  name="captchatextform" type="any" default="#form.captchatext#">
-        <cfset variable = arguments.captchaform>
-        <cfset captch = makeRandomString()>
-        <cfset hidvar = arguments.captchatextform>
-        <cfif hidvar eq variable>
+        <cfset local.variable = arguments.captchaform>
+        <cfset local.captch = makeRandomString()>
+        <cfset local.hidvar = arguments.captchatextform>
+        <cfif local.hidvar eq local.variable>
             <cfreturn "Email Address successfully subscribe our newsletter!">
         <cfelse>
             <cfreturn "Invalid captcha!">

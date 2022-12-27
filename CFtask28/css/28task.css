@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.form{
+    text-align: center;
+}
+
+.form input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius:3px;
+    border: transparent;
+}
+
+.main{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.userid{
+    margin-left: 12px;
+}
+
+.submit{
+    width: 262px;
+    margin-top: 20px;
+    background-color: skyblue;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit:hover{
+    background-color: steelblue;
+}
+

@@ -8,17 +8,17 @@
     </head>
     <boby>
         <cfoutput>
-            <cfif structKeyExists(form,'submit')>
-                <cfinvoke  method="getArrayChar" component="components/task13" returnVariable="result">
-            </cfif> 
-            <cfset structClear("#form#")>
             <div class="main">
-                <form action="task13.cfm" method="post" name="myform" class="forminput">
+                <form action="" method="post" name="myform" class="forminput">
                     <input type="text" name="text1" id="text1">
                     <input type="submit" id="submit" name="submit">
                 </form> 
             </div>
-            <!--- The key word found in "#result#" times! --->
+            <cfif structKeyExists(form,'submit')>
+                <cfinvoke  method="getArrayChar" component="components/task13" returnVariable="result">
+                The key word found in "#result#" times!
+            </cfif> 
+            <cfset structClear("#form#")>
         </cfoutput>
     <body>
 <html>

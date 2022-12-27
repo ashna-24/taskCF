@@ -19,8 +19,9 @@
             <cfif structKeyExists(form,'submit')>
                 <cfinvoke  method="textField" component="compoents/task14"> 
                 <a href="index14.cfm?name=#session.name#&stored name=#session.location#&size=#session.sizeKB#&description=#session.description#"> 
-                    <cfimage source="D:\ColdFusion\cfusion\wwwroot\CFtasks\CFtask14\assets\fileresize\#session.location#" name="myImage" action="writeToBrowser"/></a>   
-                <cfset structClear("#form#")> 
+                    <cfimage source="#expandpath(".\assets\fileresize\#session.location#")#" name="myImage" action="writeToBrowser"/>
+                </a>   
+                <cfset structClear(form)> 
             </cfif>
         </cfoutput>
     </body>

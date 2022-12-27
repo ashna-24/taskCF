@@ -29,9 +29,6 @@ function successValidate(id){
 }
 
 function optionValidate(text){ 
-  /*   console.log("value",text.value)    
-    console.log("ashna",text)    
-    var success =  */
     if(text.value==""){
       errorValidate('name_error');
       text.style.border="1px solid red";  

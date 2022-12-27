@@ -9,13 +9,17 @@
     <body>
         <cfoutput>
             <div class="main">
-                <form action="components/task12.cfc?method=getSQL" method="post" name="myform" autocomplete="off">
+                <form action="" method="post" name="myform" autocomplete="off">
                     <input type="text" name="text1" id="text1">
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
             </div>  
-           <!---  Name in position "#variable#" is "#FirstName#"
-            "#empQuery.FirstName#" "#empQuery.LastName#" --->  
+            <cfif structKeyExists(form, "submit")>
+                <cfinvoke  method="getSQL" component="components/task12" returnVariable="local.firstName">
+                Name is "#local.firstName#"
+                <cfinclude template="query.cfm">
+            </cfif>
+            <cfset structClear(form)> 
         </cfoutput>
     </body>
 </html>

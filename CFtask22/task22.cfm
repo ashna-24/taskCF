@@ -8,11 +8,7 @@
     </head>
     <body>
         <cfoutput>
-            <div class="main">
-                <form action="task22.cfm" method="post" name="myform" autocomplete="off">
-                    <cfinvoke  method="getJSONTab" component="components/task22"  returnVariable="jsonDeserialized">
-                </form> 
-            </div> 
+            <cfinvoke  method="getJSONTab" component="components/task22"  returnVariable="jsonDeserialized"> 
             <div class="table">
                 <table>                    
                     <tr>

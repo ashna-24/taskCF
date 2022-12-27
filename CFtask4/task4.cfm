@@ -7,14 +7,14 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke  method="getDate" component="components/task4" returnVariable="dateStruct">
-            Today's date #dateStruct.TodaysDate# <br>
-            Month in numeric #dateStruct.MonthInNumeric# <br>
-            Month in words #dateStruct.MonthInWords# <br>
-            Last friday date #dateStruct.LastFridayDate# <br>
-            Last day of the month #dateStruct.LastDayofTheMonth# <br>
+            <cfinvoke  method="getDate" component="components/task4" returnVariable="local.dateStruct">
+            Today's date #local.dateStruct.TodaysDate# <br>
+            Month in numeric #local.dateStruct.MonthInNumeric# <br>
+            Month in words #local.dateStruct.MonthInWords# <br>
+            Last friday date #local.dateStruct.LastFridayDate# <br>
+            Last day of the month #local.dateStruct.LastDayofTheMonth# <br>
             <cfloop from="1" to="5" index="i">
-                #dateStruct[i]#<br>
+                #local.dateStruct[i]#<br>
             </cfloop>
             <cfset structClear("#form#")>
         </cfoutput>

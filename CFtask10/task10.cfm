@@ -9,9 +9,10 @@
     <body>
         <cfoutput>
             <cfif structKeyExists(form,'submit')>
-                <cfinvoke  method="getStruct" component="components/task10">
+                <cfinvoke  method="getStruct" component="components/task10" returnVariable="session.myStruct">
+                <cfdump  var="#session.myStruct#">
             </cfif> 
-            <cfset structClear("#form#")>
+            <cfset structClear(form)>
             <div class="main">
                 <form action="task10.cfm" method="post" name="myform" autocomplete="off">
                     <input type="text" name="text1" id="text1">

@@ -15,8 +15,14 @@
                 </form>               
             </div>
             <cfif structKeyExists(form, "submit")>
-                <cfinvoke  method="divisible" component="components/task3" returnVariable="struct.value">
-                #struct.value#
+                <cfinvoke  method="divisible" component="components/task3" returnVariable="local.struct">
+                <cfif arrayIsEmpty(local.struct)>
+                    The input number is not a multiple of 3
+                <cfelse>
+                    <cfloop index="i" array="#local.struct#">
+                        #i#
+                    </cfloop>
+                </cfif>
                 <cfset structClear(form)>
             </cfif>
            <!--- <cfreturn "#i#"> --->

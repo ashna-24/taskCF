@@ -7,8 +7,12 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke  method="textField" component = "components/task16">    
-            <!--- <cfreturn "#Result[i][j]#"> --->
+            <cfinvoke  method="textField" component ="components/task16" returnVariable="result">
+            <cfloop from="1" to="3" index="i">
+                <cfloop from="1" to="3" index="j"> 
+                    #result[i][j]#
+                </cfloop><br>
+            </cfloop>   
         </cfoutput>
     </body>
 </html>

@@ -10,13 +10,13 @@
         <cfif structKeyExists(form, "submit")>
             <cfquery name="form" datasource="wufoo">
                 INSERT INTO form 
-                VALUES ('#arguments.option#',
-                        '#arguments.date#',
-                        '#arguments.url#',
-                        '#arguments.firstname#',
-                        '#arguments.lastname#',
-                        '#arguments.mail#',
-                        '#arguments.phone#');
+                VALUES (<cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.option#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.date#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.url#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.firstname#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.lastname#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.mail#">,
+                        <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#arguments.phone#">);
             </cfquery>
         </cfif>
     </cffunction>

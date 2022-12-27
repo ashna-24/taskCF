@@ -9,8 +9,7 @@
         <cfoutput>   
             <h3>The details</h3>
             <div> 
-                <!--- <cfinvoke  method="textField" component="compoents/task14" returnVariable="session.location"> --->
-                <cfimage source="assets\#session.location#" name="myImage" action="writeToBrowser"><br>
+                <cfimage source="#expandpath("assets\#session.location#")#" name="myImage" action="writeToBrowser"><br>
                 The Image name = #session.name#<br>
                 The Image stored name =#session.location#<br>
                 The Image size = #session.sizeKB# KB <br>

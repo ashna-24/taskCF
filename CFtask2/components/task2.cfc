@@ -1,26 +1,25 @@
 <cfcomponent>
     <cffunction  name="getNumbers" access="remote">
-        <cfif structKeyExists(form, 'submit')>
-            <cfswitch expression="#textinput#">
-                <cfcase value="1">
-                    Ok
-                </cfcase>
-                 <cfcase value="2">
-                    Ok
-                </cfcase>
-                 <cfcase value="3">
-                    Fair
-                </cfcase>
-                 <cfcase value="4">
-                    Good
-                </cfcase>
-                 <cfcase value="5">
-                    Very Good
-                </cfcase>
-                <cfdefaultcase>
-                    Invalid Number!
-                </cfdefaultcase> 
-            </cfswitch>
-       </cfif>
+        <cfargument  name="text" type="numeric" default="#form.textinput#">
+        <cfswitch expression="#arguments.text#">
+            <cfcase value="1">
+                <cfreturn "Ok">
+            </cfcase>
+                <cfcase value="2">
+                    <cfreturn "Ok">
+            </cfcase>
+                <cfcase value="3">
+                    <cfreturn "Fair">
+            </cfcase>
+                <cfcase value="4">
+                    <cfreturn "Good">
+            </cfcase>
+                <cfcase value="5">
+                    <cfreturn "Very Good">
+            </cfcase>
+            <cfdefaultcase>
+                    <cfreturn "Invalid Number!">
+            </cfdefaultcase> 
+        </cfswitch>
     </cffunction>
 </cfcomponent>
