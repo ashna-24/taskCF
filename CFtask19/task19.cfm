@@ -9,13 +9,14 @@
     <boby>
         <cfoutput>
             <div class="mainBody">
-                <form action="task19.cfm" method="post" name="myform">
+                <form action="" method="post" name="myform">
                     <input type="submit" id="submit" name="submit">
                 </form>
             </div>
             <cfif structKeyExists(form, "submit")>
                 <cfinvoke  method="count" component="components/task19" returnvariable="cookieCounter"> 
                 #cookieCounter# times you visited this page!
+                <cfset structClear(form)>
             </cfif>
         </cfoutput>
     <body>

@@ -8,14 +8,12 @@
         <script src="js/task23.js"></script>
     </head>
     <body>
-        <cfoutput>
-            
+        <cfoutput>    
             <div class="main">
                 <div class="mainform">
                     <div class="logo">
-                        <img src="assets/wflogo.png">
+                        <img src="assets/wflogo.png" alt="Not found">
                     </div>
-
                     <div class="myform">
                         <div class="head">
                             <h4>Employment Application</h4>
@@ -23,9 +21,10 @@
                         </div>                        
                         <div class="form">
                             <cfif structKeyExists(form, "submit")>
-                                <cfinvoke  method="getFormdata" component="components/23task">
+                                <cfinvoke method="getFormdata" component="components/23task">
                             </cfif>
-                            <form action="task23.cfm" method="post" class="wfform" name="myform" onsubmit="return validateform()">
+                            <cfset structClear(form)>
+                            <form action="" method="post" class="wfform" name="myform" onsubmit="return validateform()">
                                 <div class="select wfformhover">
                                     <h3 class="textsize"> Which position are you applying for?<span class="red">*</span></h3>
                                     <select class="option" name="option" id="option">

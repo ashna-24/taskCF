@@ -8,7 +8,7 @@
     </head>
     <body>
         <cfoutput> 
-            <cfobject component="components/task15" name="multiplyValues" type="component" action="Create" >
+            <cfobject component="components/task15" name="multiplyValues" type="component" action="Create">
             <cfset local.multiplyValues = createObject("component","components/task15")>
             <cfset local.res = local.multiplyValues.mulitiply(1,2)>
             #local.res#

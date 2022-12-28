@@ -13,6 +13,7 @@
             Month in words #local.dateStruct.MonthInWords# <br>
             Last friday date #local.dateStruct.LastFridayDate# <br>
             Last day of the month #local.dateStruct.LastDayofTheMonth# <br>
+            Previous Five Days,<br>
             <cfloop from="1" to="5" index="i">
                 #local.dateStruct[i]#<br>
             </cfloop>

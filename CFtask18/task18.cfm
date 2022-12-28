@@ -7,7 +7,8 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke  method="getSQL" component="components/task18">  
+            <cfinvoke  method="getSQL" component="components/task18" returnVariable="queryData"> 
+            <cfdump  var="#queryData#"> 
         </cfoutput>
     </body>
 </html>

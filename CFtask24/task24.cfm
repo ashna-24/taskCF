@@ -9,10 +9,10 @@
         <cfoutput>
             <div class="mainBody">
                 <form action="" method="post" name="form" class="myform">
-                    <label>Name</label>
-                    <input type="text" class="text" name="name" id="name">
-                    <label>Email id</label>
-                    <input type="email" class="text" name="email" id="email">
+                    Name
+                    <input type="text" class="text" name="name" id="name"><br>
+                    Email id
+                    <input type="email" class="text" name="email" id="email"><br>
                     <input type="checkbox" class="text" id="check" name="check" onclick="checktest()"> 
                     <input type="submit" value="submit" class="text" id="submit" name="submit">
                 </form>

@@ -1,16 +1,15 @@
 <cfcomponent>
-    <cffunction name="divisible" access="remote" returnType="struct">
+    <cffunction name="divisible" access="remote" returnType="array">
         <cfargument  name="field" type="any" default="#form.textinput#">
         <cfset local.data = arguments.field>
-        <cfset local.arr = rematch("[\d]+",data)>
-        <cfset local.struct=structNew()>
-            <cfloop array="#local.arr#" index="i">
-                <!--- <cfif (i % 3) eq 0> --->
-                    <cfset structInsert(local.struct, "#i#", "#local.arr#")>
-                    <!--- <cfset struct=structNew()>
-                    <cfset struct.value="#i#"> --->
-                    <cfcontinue>
-                <!--- </cfif> --->                   
-            </cfloop>
+        <cfset local.array = rematch("[\d]+",data)>
+        <cfset local.arrayData= arrayNew(1)>
+        <cfloop array="#local.array#" index="i">
+            <cfif (i % 3) eq 0>
+                <cfset arrayAppend(local.arrayData, i)>
+                <cfcontinue>
+            </cfif>                   
+        </cfloop>
+        <cfreturn local.arrayData>
     </cffunction>
 </cfcomponent>

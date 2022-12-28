@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/28task.css">       
+        <link rel="stylesheet" href="css/28style.css">       
         <title>Login</title>
     </head>
     <body>
@@ -16,7 +16,7 @@
                         Password: <input type="password" name="password" class="text" id="password" required="yes"><br>
                         <input type="submit" name="submit" value="Login" class="text submit">
                     </form>
-                    <cfif structKeyExists( form,"submit")>
+                    <cfif structKeyExists(form,"submit")>
                         <cfinvoke method="getDetails" component="components/task28">
                         <cfset structClear(form)>
                     </cfif>

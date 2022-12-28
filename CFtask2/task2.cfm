@@ -9,16 +9,16 @@
     <body>
         <cfoutput>
             <div class="main">
-                <form action="task2.cfm" method="post" class="forminput">                
+                <form action="" method="post" class="forminput">                
                     <input type="text" name="textinput" id="textbox">
                     <input type="submit" value="Submit" id="submit" name="submit">
                 </form>    
             </div>
             <cfif structKeyExists(form,"submit")>
                 <cfinvoke  method="getNumbers" component="components/task2" returnVariable="result">
+                #result#
+                <cfset structClear(form)>
             </cfif>
-            #result#
-            <cfset structClear(form)>
         </cfoutput>
     </body>
 </html>

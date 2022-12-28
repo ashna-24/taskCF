@@ -1,5 +1,5 @@
 <cfcomponent>
-    <cffunction  name="getNumbers" access="remote">
+    <cffunction  name="getNumbers" access="remote" returnType="any">
         <cfargument  name="text" type="numeric" default="#form.textinput#">
         <cfswitch expression="#arguments.text#">
             <cfcase value="1">

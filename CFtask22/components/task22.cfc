@@ -1,7 +1,7 @@
 <cfcomponent>
     <cffunction  name="getJSONTab" access="remote">
         <cfset queryTable= serializeJSON([
-            {"Name":"saravanan","Age":27,"LOCATION":"dubai"},
+            {"Name":"Saravanan","Age":27,"LOCATION":"Dubai"},
             {"Name":"Ram","Age":26,"LOCATION":"Kovilpatti"}
         ])>
         <cfset jsonDeserialized=deserializeJSON("#queryTable#")>

@@ -9,23 +9,22 @@
     <body>
         <cfoutput>            
             <div class="main">
-                <form action="task3.cfm" method="post" class="forminput">                
+                <form action="" method="post" class="forminput">                
                     <input type="text" name="textinput" id="textbox">
                     <input type="submit" value="Submit" id="submit" name="submit">
                 </form>               
             </div>
             <cfif structKeyExists(form, "submit")>
-                <cfinvoke  method="divisible" component="components/task3" returnVariable="local.struct">
-                <cfif arrayIsEmpty(local.struct)>
+                <cfinvoke  method="divisible" component="components/task3" returnVariable="local.arrayData">
+                <cfif arrayIsEmpty(local.arrayData)>
                     The input number is not a multiple of 3
                 <cfelse>
-                    <cfloop index="i" array="#local.struct#">
+                    <cfloop index="i" array="#local.arrayData#">
                         #i#
                     </cfloop>
                 </cfif>
                 <cfset structClear(form)>
             </cfif>
-           <!--- <cfreturn "#i#"> --->
         </cfoutput>
     </body>
 </html>

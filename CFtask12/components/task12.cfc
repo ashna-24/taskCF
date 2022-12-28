@@ -12,7 +12,7 @@
             </cfloop>
             <cfreturn local.firstName>
         <cfelse>
-            <cflocation  url="./task12.cfc">   
+            <cflocation url="./task12.cfc">   
         </cfif>
     </cffunction>
 </cfcomponent>

@@ -7,7 +7,7 @@
         <title>Count</title>
     </head>
     <body>
-        <cfinvoke  method="getWordQuery" component="query" returnVariable="textCount">
+        <cfinvoke method="getWordQuery" component="query" returnVariable="textCount">
         <cfset local.valueText="#textCount.Wordcount#">
         <cfset local.x=randRange(0, 255)>
         <cfset local.y=randRange(0, 255)>

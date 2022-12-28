@@ -7,10 +7,7 @@
         <title>Query</title>
     </head>
     <body>
-        <cfquery datasource="querytab" name="empQuery">
-            SELECT * 
-            FROM employee;
-        </cfquery>
+        <cfinvoke method="getQueryempQuery" component="components/query" returnVariable="empQuery">
         <cfoutput query="empQuery">
             #empQuery.FirstName# #empQuery.LastName#<br>
         </cfoutput>

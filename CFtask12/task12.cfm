@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/task12.css">       
-        <title></title>
+        <title>Name List</title>
     </head>
     <body>
         <cfoutput>
@@ -15,11 +15,11 @@
                 </form> 
             </div>  
             <cfif structKeyExists(form, "submit")>
-                <cfinvoke  method="getSQL" component="components/task12" returnVariable="local.firstName">
-                Name is "#local.firstName#"
+                <cfinvoke method="getSQL" component="components/task12" returnVariable="local.firstName">
+                Name is "#local.firstName#"<br>
                 <cfinclude template="query.cfm">
+                <cfset structClear(form)> 
             </cfif>
-            <cfset structClear(form)> 
         </cfoutput>
     </body>
 </html>

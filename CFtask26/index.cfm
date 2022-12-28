@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/task25.css">       
-        <title></title>
+        <title>Fileupload</title>
     </head>
     <body>
         <cfoutput>
@@ -16,7 +16,7 @@
                 <cfobject  name="textObj" type="component" component="tagCloud" action="Create">
             </div>
             <cfif structKeyExists(session, "getWordString")>
-				<cfinclude template="task25.cfm">
+				<cfinclude template="task26.cfm">
 				<cfset structClear(Session)>
 			</cfif>
         </cfoutput>

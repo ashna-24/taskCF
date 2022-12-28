@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+    font-size: 20px;
+    color: aliceblue;
+}*/
+
+.main{
+    color: linen;
+}
+
+.form{
+    text-align: center;
+}
+
+.form input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius:3px;
+    border: transparent;
+}
+
+.main{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.userid{
+    margin-left: 12px;
+}
+
+.submit{
+    width: 262px;
+    margin-top: 20px;
+    background-color: skyblue;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit:hover{
+    background-color: steelblue;
+}
+
+.userbody{
+    background-image: url(../assets/userbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.userMain{
+    display: flex;
+}
+
+.userWelcome{
+    padding: 263px 350px;
+    text-align: center;
+}
+
+.userWelcome h3{
+    color: midnightblue;
+    font-size: 35px;
+}
+
+.userList{
+    padding: 50px 90px 0px 30px;
+}
+
+.list a{
+    color: blanchedalmond;
+    display: block;
+}
+
+.userLogout{
+    padding: 50px 10px 0px 130px;
+}
+
+.Logout{
+    padding: 5px;
+    background-color: lightyellow;
+}

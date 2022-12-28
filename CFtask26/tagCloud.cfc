@@ -5,20 +5,20 @@
         <cfreturn this>
     </cffunction> 
     <cffunction  name="getWordString" access="remote">
-        <cfset textData="#mytext#">
-        <cfset keyText=0>
-        <cfloop list="#textData#" delimiters=" .;" index="i">
-            <cfset keyText= keyText+1>
-            <cfset ValueText = "#i#">
+        <cfset local.textData="#mytext#">
+        <cfset local.keyText=0>
+        <cfloop list="#local.textData#" delimiters=" .;" index="i">
+            <cfset local.keyText= local.keyText+1>
+            <cfset local.ValueText = "#i#">
             <cfif not isNumeric(i)>
                 <cfif not isDefined("struct")>
-                    <cfset struct=structNew("Ordered")>
-                    <cfset textvar=structInsert(struct, "#keyText#", "#valueText#")>
+                    <cfset local.struct=structNew("Ordered")>
+                    <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
                 <cfelse>
-                    <cfset textvar=structInsert(struct, "#keyText#", "#valueText#")>
+                    <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
                 </cfif>
             </cfif>
         </cfloop>
-        <cfreturn struct>
+        <cfreturn local.struct>
     </cffunction>
 </cfcomponent>

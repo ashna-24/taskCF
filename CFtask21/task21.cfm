@@ -9,7 +9,7 @@
     <body>
         <cfoutput>
             <div class="main">
-                <form action="task21.cfm" method="post" name="myform" enctype="multipart/form-data" class="myform">
+                <form action="" method="post" name="myform" enctype="multipart/form-data" class="myform">
                     Name:<input type="text" name="textName" id="textName"><br>
                     MailID:<input type="text" name="mail" id="mail"><br>
                     Greeting:<input type="text" name="wish" id="wish"><br>
@@ -20,8 +20,8 @@
                 <cfif structKeyExists(form, "submit")>
                     <cfinvoke method="getWish" component="components/task21" returnVariable="result">
                     #result#
+                    <cfset structClear(form)>
                 </cfif>
-                <cfset structClear(form)>
             </div>
         </cfoutput>
     </body>

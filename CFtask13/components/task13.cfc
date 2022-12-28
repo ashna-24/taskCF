@@ -1,14 +1,14 @@
 <cfcomponent>
-    <cffunction  name="getArrayChar" access="remote">
+    <cffunction  name="getArrayChar" access="remote" returnType="array">
         <cfargument  name="keyText" type="string" default="#form.text1#">
-        <cfset textvar= arguments.keyText>
-        <cfset count=0>
-        <cfset array= ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]>
-        <cfloop from="1" to="#arrayLen(array)#" index="i">
-            <cfif textvar eq array[i]>
-                <cfset count = #count# + 1>
+        <cfset local.textvar= arguments.keyText>
+        <cfset local.count=0>
+        <cfset local.array= ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]>
+        <cfloop from="1" to= #arrayLen(local.array)# index="i">
+            <cfif local.textvar eq local.array[i]>
+                <cfset local.count = local.count + 1>
             </cfif>
         </cfloop>
-        <cfreturn count>
+        <cfreturn local.count>
     </cffunction>
 </cfcomponent>

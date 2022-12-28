@@ -8,7 +8,7 @@
     <body>
         <cfoutput>   
             <div class="mainBody">
-                <form action="task14.cfm" method="post" enctype="multipart/form-data">            
+                <form action="" method="post" enctype="multipart/form-data">            
                     Image name<input type="text" name="name" class="text name"><br>
                     Description<textarea class="text" rows="4" cols="50" name="description"></textarea><br>
                     Select file<input type="file" name="file" class="file"><br>

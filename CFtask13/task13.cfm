@@ -15,10 +15,10 @@
                 </form> 
             </div>
             <cfif structKeyExists(form,'submit')>
-                <cfinvoke  method="getArrayChar" component="components/task13" returnVariable="result">
+                <cfinvoke method="getArrayChar" component="components/task13" returnVariable="result">
                 The key word found in "#result#" times!
+                <cfset structClear("#form#")>
             </cfif> 
-            <cfset structClear("#form#")>
         </cfoutput>
     <body>
 <html>

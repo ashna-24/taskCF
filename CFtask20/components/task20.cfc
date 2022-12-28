@@ -1,8 +1,8 @@
 <cfcomponent>
     <cffunction name="makeRandomString" returnType="string" output="false">
-	    <cfset var local.chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz">
-	    <cfset var local.length = randRange(6,6)>
-	    <cfset var local.result = "">
+	    <cfset local.chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz">
+	    <cfset local.length = randRange(6,6)>
+	    <cfset local.result = "">
         <cfloop from="1" to="#local.length#" index="i">
             <cfset local.char= mid(local.chars, randRange(1, len(local.chars)), 1)>
             <cfset local.result&=local.char>
@@ -10,8 +10,8 @@
 	    <cfreturn local.result>
     </cffunction>
     <cffunction name="getCaptcha" access="remote">
-        <cfargument  name="captchaform" type="any" default="#form.captcha#">
-        <cfargument  name="captchatextform" type="any" default="#form.captchatext#">
+        <cfargument name="captchaform" type="any" default="#form.captcha#">
+        <cfargument name="captchatextform" type="any" default="#form.captchatext#">
         <cfset local.variable = arguments.captchaform>
         <cfset local.captch = makeRandomString()>
         <cfset local.hidvar = arguments.captchatextform>

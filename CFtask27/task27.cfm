@@ -4,11 +4,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/task27.css">       
-        <title></title>
+        <title>Welcome</title>
     </head>
     <body>
         <cfoutput>
-            <cfif structKeyExists( form,'submit')>
+            <cfif structKeyExists(form,'submit')>
                 <cfinvoke method="getLogin" component="components/task27">
                 <cfset structClear(form)>
             </cfif>

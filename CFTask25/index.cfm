@@ -13,7 +13,7 @@
                     <textarea name="text" cols="50" rows="5" id="text"></textarea>
                     <input type="submit" name="submit" id="submit">
                 </form>
-                <cfobject  name="textObj" type="component" component="tagCloud" action="Create">
+                <cfobject name="textObj" type="component" component="tagCloud" action="Create">
             </div>
             <cfif structKeyExists(session, "getWordString")>
 				<cfinclude template="task25.cfm">

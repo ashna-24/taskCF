@@ -8,7 +8,7 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke  method="getJSONTab" component="components/task22"  returnVariable="jsonDeserialized"> 
+            <cfinvoke method="getJSONTab" component="components/task22" returnVariable="jsonDeserialized"> 
             <div class="table">
                 <table>                    
                     <tr>
