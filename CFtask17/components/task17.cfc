@@ -14,7 +14,7 @@
             </cfloop>  
             <cfreturn local.myArray>
         <cfelse>
-            <cflocation  url="./task17.cfm">
+            <cflocation url="./task17.cfm">
         </cfif>
     </cffunction>
 </cfcomponent>

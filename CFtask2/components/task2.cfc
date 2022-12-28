@@ -5,20 +5,20 @@
             <cfcase value="1">
                 <cfreturn "Ok">
             </cfcase>
-                <cfcase value="2">
-                    <cfreturn "Ok">
+            <cfcase value="2">
+                <cfreturn "Ok">
             </cfcase>
-                <cfcase value="3">
-                    <cfreturn "Fair">
+            <cfcase value="3">
+                <cfreturn "Fair">
             </cfcase>
-                <cfcase value="4">
-                    <cfreturn "Good">
+            <cfcase value="4">
+                <cfreturn "Good">
             </cfcase>
-                <cfcase value="5">
-                    <cfreturn "Very Good">
+            <cfcase value="5">
+                <cfreturn "Very Good">
             </cfcase>
             <cfdefaultcase>
-                    <cfreturn "Invalid Number!">
+                <cfreturn "Invalid Number!">
             </cfdefaultcase> 
         </cfswitch>
     </cffunction>

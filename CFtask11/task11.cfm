@@ -11,8 +11,7 @@
             <cfinvoke method="getOutput" component="components/task11" returnVariable="local.result">
             #local.result.result1# 
             #local.result.result2# 
-            #local.result.result3#
-            <cfset structClear(form)> 
+            #local.result.result3# 
         </cfoutput>
     </body>
 </html>

@@ -9,13 +9,13 @@
         <cfset local.keyText=0>
         <cfloop list="#local.textData#" delimiters=" .;" index="i">
             <cfset local.keyText= local.keyText+1>
-            <cfset local.ValueText = "#i#">
+            <cfset local.ValueText = i>
             <cfif not isNumeric(i)>
                 <cfif not isDefined("struct")>
                     <cfset local.struct=structNew("Ordered")>
-                    <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
+                    <cfset local.textvar=structInsert(struct, local.keyText, local.valueText)>
                 <cfelse>
-                    <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
+                    <cfset local.textvar=structInsert(struct, local.keyText, local.valueText)>
                 </cfif>
             </cfif>
         </cfloop>

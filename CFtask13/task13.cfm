@@ -17,7 +17,7 @@
             <cfif structKeyExists(form,'submit')>
                 <cfinvoke method="getArrayChar" component="components/task13" returnVariable="result">
                 The key word found in "#result#" times!
-                <cfset structClear("#form#")>
+                <cfset structClear(form)>
             </cfif> 
         </cfoutput>
     <body>

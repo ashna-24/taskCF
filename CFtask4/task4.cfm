@@ -17,7 +17,7 @@
             <cfloop from="1" to="5" index="i">
                 #local.dateStruct[i]#<br>
             </cfloop>
-            <cfset structClear("#form#")>
+            <cfset structClear(form)>
         </cfoutput>
     </body>
 </html>

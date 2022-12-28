@@ -14,7 +14,7 @@
                     <input type="submit" value="Submit" id="submit" name="submit"> 
                 </form> 
             </div>    
-            <cfif structKeyExists(form,'submit')>
+            <cfif structKeyExists(form,"submit")>
                 <cfinvoke  method="getEvenOdd" component="components/task17" returnVariable="myArray">
                 <cfloop array="#myArray#" index="i">
                     #i#
