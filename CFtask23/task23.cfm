@@ -22,8 +22,8 @@
                         <div class="form">
                             <cfif structKeyExists(form, "submit")>
                                 <cfinvoke method="getFormdata" component="components/23task">
+                                <cfset structClear(form)>
                             </cfif>
-                            <cfset structClear(form)>
                             <form action="" method="post" class="wfform" name="myform" onsubmit="return validateform()">
                                 <div class="select wfformhover">
                                     <h3 class="textsize"> Which position are you applying for?<span class="red">*</span></h3>

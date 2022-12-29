@@ -8,10 +8,10 @@
     </head>
     <body>
         <cfoutput>
-            <cfinvoke method="getOutput" component="components/task11" returnVariable="local.result">
-            #local.result.result1# 
-            #local.result.result2# 
-            #local.result.result3# 
+            <cfinvoke method="getOutput" component="components/task11" returnVariable="result">
+            #result.result1# 
+            #result.result2# 
+            #result.result3# 
         </cfoutput>
     </body>
 </html>

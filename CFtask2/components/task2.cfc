@@ -3,22 +3,28 @@
         <cfargument  name="text" type="numeric" default="#form.textinput#">
         <cfswitch expression="#arguments.text#">
             <cfcase value="1">
-                <cfreturn "Ok">
+                <cfset local.res="Ok">
+                <cfreturn local.res>
             </cfcase>
             <cfcase value="2">
-                <cfreturn "Ok">
+                <cfset local.res="Ok">
+                <cfreturn local.res>
             </cfcase>
             <cfcase value="3">
-                <cfreturn "Fair">
+                <cfset local.res="Fair">
+                <cfreturn local.res>
             </cfcase>
             <cfcase value="4">
-                <cfreturn "Good">
+                <cfset local.res="Good">
+                <cfreturn local.res>
             </cfcase>
             <cfcase value="5">
-                <cfreturn "Very Good">
+                <cfset local.res="Very Good">
+                <cfreturn local.res>
             </cfcase>
             <cfdefaultcase>
-                <cfreturn "Invalid Number!">
+                <cfset local.res="Invalid Number!">
+                <cfreturn local.res>
             </cfdefaultcase> 
         </cfswitch>
     </cffunction>

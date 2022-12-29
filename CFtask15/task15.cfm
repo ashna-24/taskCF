@@ -10,11 +10,11 @@
         <cfoutput> 
             <cfobject component="components/task15" name="multiplyValues" type="component" action="Create">
             <cfset local.multiplyValues = createObject("component","components/task15")>
-            <cfset local.res = local.multiplyValues.mulitiply(1,2)>
+            <cfset local.res = local.multiplyValues.multiply(1,2)>
             #local.res#
-            <cfset local.res = local.multiplyValues.mulitiply(1,2,3)>
+            <cfset local.res = local.multiplyValues.multiply(1,2,3)>
             #local.res#
-            <cfset local.res = local.multiplyValues.mulitiply(1,2,3,4)>
+            <cfset local.res = local.multiplyValues.multiply(1,2,3,4)>
             #local.res#               
         </cfoutput>
     </body>

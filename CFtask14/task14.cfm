@@ -18,7 +18,7 @@
             </div>
             <cfif structKeyExists(form,'submit')>
                 <cfinvoke  method="textField" component="compoents/task14"> 
-                <a href="index14.cfm?name=#session.name#&stored name=#session.location#&size=#session.sizeKB#&description=#session.description#"> 
+                <a href="index14.cfm"> 
                     <cfimage source="#expandpath(".\assets\fileresize\#session.location#")#" name="myImage" action="writeToBrowser"/>
                 </a>   
                 <cfset structClear(form)> 

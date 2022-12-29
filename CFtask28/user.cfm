@@ -11,19 +11,36 @@
             <cfoutput>
                 <cfif structKeyExists(session, "userFlag")>
                     <div class="userMain">
-                        <div class="userList list">
-                            <cfinvoke  method="getQueryUser" returnVariable="pageDtlList" component="components/user">
-                            <cfloop query="pageDtlList">
-                                <a href="displaypage.cfm?name=#pageDtlList.pagename#">#pageDtlList.pagename#</a>
-                            </cfloop>
-                        </div>
                         <div class="userWelcome">
                             <h3>WELCOME #session.name#</h3>
+                        </div>
+                        <div class="userList">
+                            <cfinvoke  method="getQueryUser" returnVariable="pageDtlList" component="components/user">
+                            <div class="table">
+                                <div class="pageList">
+                                    <table>
+                                        <cfloop query="pageDtlList">
+                                            <tr>
+                                                <td class="pageTd">
+                                                    <cfset description="#pageDtlList.pagename#">
+                                                    <button type="submit" class="button" onclick="dispalyPage('#description#')">#description#</button>
+                                                </td>
+                                            </tr>
+                                        </cfloop>
+                                    <table>
+                                </div>
+                                <div class="message">
+                                    <span id="pageMsg"></span>
+                                </div>
+                            </div>
                         </div>
                         <div class="userLogout">
                             <a href="task28login.cfm" class="logout"><input type="submit" value="Logout" name="submit" id="submit" class="Logout"></a><br>
                         </div>
                     </div>
+                    <script src="assets/jquery.js"></script>
+                    <script src="assets/jquery.min.js"></script>
+                    <script src="js/task28.js"></script>
                 <cfelse>
                     <cflocation url="task28login.cfm" addtoken="No">
                     <cfset StructClear(Session)>

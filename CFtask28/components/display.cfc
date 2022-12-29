@@ -1,10 +1,11 @@
 <cfcomponent>
-    <cffunction  name="getQueryDisplay" access="remote" returnType="query">
-        <cfquery name="display" datasource="employee">
+    <cffunction name="getDesc" access="remote" returnformat="plain">
+        <cfargument name="Email" type="string" required="yes">
+        <cfquery name="queryDesc" datasource="employee">
             SELECT pagedescs 
             FROM pagesDtl
-            WHERE pagename=<cfqueryparam value='#url.name#' cfsqltype="CF_SQL_VARCHAR">
+            WHERE pagename=<cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.Email#">
         </cfquery>
-        <cfreturn display>
+        <cfreturn queryDesc.pagedescs>
     </cffunction>
 </cfcomponent>

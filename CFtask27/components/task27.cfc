@@ -1,7 +1,7 @@
 <cfcomponent>
     <cffunction name="getLogin" access="remote">
-        <cfargument name="uname" default="#form.uname#">
-        <cfargument name="password" default="#form.password#">
+        <cfargument name="uname" default="#form.uname#" type="any">
+        <cfargument name="password" default="#form.password#" type="any">
         <cfset session.name = arguments.uname>
         <cfquery name="userLogin" datasource="employee">
             SELECT count(*) records

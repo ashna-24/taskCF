@@ -16,12 +16,12 @@
                 </form>
             </div>
             <cfif structKeyExists(form, "submit")>
-                <cfinvoke  method="getAge" component="components/task5" returnVariable="local.ageStruct">
-                Users age is: "#local.ageStruct.UsersAge#" <br>
-                At age "#local.ageStruct.MotherDeliveredHim#" his mother delivered him. <br>
-                "#local.ageStruct.childBirthday#" remaining for child's birthday <br>
-                "#local.ageStruct.MotherBirthday#" remaining for Mother's birthday.
-                <cfset structClear("#form#")>
+                <cfinvoke  method="getAge" component="components/task5" returnVariable="ageStruct">
+                Users age is: "#ageStruct.UsersAge#" <br>
+                At age "#ageStruct.MotherDeliveredHim#" his mother delivered him. <br>
+                "#ageStruct.childBirthday#" remaining for child's birthday <br>
+                "#ageStruct.MotherBirthday#" remaining for Mother's birthday.
+                <cfset structClear(form)>
             </cfif>
         </cfoutput>
     </body>

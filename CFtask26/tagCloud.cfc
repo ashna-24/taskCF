@@ -11,10 +11,10 @@
             <cfset local.keyText= local.keyText+1>
             <cfset local.ValueText = "#i#">
             <cfif not isNumeric(i)>
-                <cfif not isDefined("struct")>
-                    <cfset local.struct=structNew("Ordered")>
+                <cfif structKeyExists(local,"struct")>
                     <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
                 <cfelse>
+                    <cfset local.struct=structNew("Ordered")>
                     <cfset local.textvar=structInsert(struct, "#local.keyText#", "#local.valueText#")>
                 </cfif>
             </cfif>

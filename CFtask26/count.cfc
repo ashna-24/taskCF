@@ -13,7 +13,7 @@
                 DELETE FROM textQueryData
             </cfquery>
             <cfset local.textObj=createObject("component", "tagCloud").getText(mytext="#fieldList#")>
-            <cfset local.resObj="#textObj.getWordString()#"> 
+            <cfset local.resObj=textObj.getWordString()> 
             <cfloop item="word" collection="#resObj#">
                 <cfquery name="textQuery" datasource="employee">
                     SELECT Word, Wordcount 

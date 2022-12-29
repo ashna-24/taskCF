@@ -8,7 +8,7 @@
     </cffunction>
     <cffunction  name="getQueryAdmin" access="remote" returnType="query">
         <cfquery name="descList" datasource="employee">
-            SELECT pagedescs,pageid 
+            SELECT pagedescs, pageid 
             FROM pagesDtl
             WHERE pageid =<cfqueryparam value="#arguments.pageid#" cfsqltype="cf_sql_varchar">
         </cfquery>

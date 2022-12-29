@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-/* body{
-    font-size: 20px;
-    color: aliceblue;
-}*/
-
 .main{
     color: linen;
 }
@@ -57,9 +52,9 @@
 }
 
 .userbody{
-    background-image: url(../assets/userbg.jpg);
+    background-image: url(../assets/admin.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .adminbody{
@@ -68,31 +63,61 @@
     background-size: cover;   
 }
 
-.userMain{
-    display: flex;
-}
-
 .userWelcome{
-    padding: 263px 350px;
     text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    color: honeydew;
 }
 
 .adminWelcome{
     text-align: center;
-    padding: 310px 260px;
+    padding-top: 40px;
 }
 
-.userWelcome h3, .adminWelcome h3{
+.table{
+    position: relative;
+    margin-bottom: 545px;
+}
+
+.pageList{
+    display: flex;
+}
+
+.relative{
+    position: relative;
+}
+
+.button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: azure;
+    margin: 0px 0px 10px 30px;
+    cursor: pointer;
+    font-family: emoji;
+    font-size: 14px;
+}
+
+.message{
+    position: absolute;
+    left: 200px;
+    width: 500px;
+}
+
+.userLogout{
+    position: absolute;
+    right: 70px;
+}
+
+.adminWelcome h3{
     color: midnightblue;
     font-size: 35px;
 }
 
-.userList{
-    padding: 50px 90px 0px 30px;
-}
-
 .adminList{
-    padding: 50px 70px 0px 30px;
+    padding: 50px 70px 330px 30px;
 }
 
 .adminList a{
@@ -100,32 +125,31 @@
     text-decoration: none;
 }
 
-.list a{
-    color: blanchedalmond;
-    display: block;
-    text-decoration: none;
-}
-
-.userLogout{
-    padding: 50px 10px 0px 130px;
-}
-
 .Logout{
     padding: 5px;
-    background-color: lightyellow;
+    border-radius: 3px;
+    border: transparent;
 }
 
 .adminlogout{
     padding: 50px 40px 0px 165px;
+    position: absolute;
+    right: 50px;
 }
 
-table{
-    margin-bottom: 40px;
+.adminTable{
+    margin-bottom: 50px;
 }
 
-tr,td{
+.adminTr{
     border: 1px solid black;
-    padding: 5px;
+    padding: 10px;
+}
+
+.adminTd{
+    border: 3px solid black;
+    text-align: center;
+    padding: 0px 5px;
 }
 
 .newOne{
