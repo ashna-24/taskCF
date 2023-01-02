@@ -1,5 +1,5 @@
 <cfcomponent>
-    <cffunction  name="getArrayChar" access="remote" returnType="array">
+    <cffunction  name="getArrayChar" access="remote">
         <cfargument  name="keyText" type="string" default="#form.text1#">
         <cfset local.textvar= arguments.keyText>
         <cfset local.count = 0>

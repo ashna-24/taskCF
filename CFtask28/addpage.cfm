@@ -8,7 +8,7 @@
     </head>
     <body>
         <cfoutput>
-            <cfif structKeyExists(session,"name")>
+            <cfif structKeyExists(session,"adminFlag")>
                 <form action="" method="post" name="myform">
                     PageID: <input type="text" name="pageId" id="pageId">
                     PageName: <input type="text" name="pagename" id="pageName">

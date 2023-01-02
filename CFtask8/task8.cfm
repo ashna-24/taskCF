@@ -9,7 +9,7 @@
     <body>
         <cfoutput>
             <cfif structKeyExists(form,'submit')>
-                <cfinvoke  method="getStruct" component="components/task8" returnVariable="session.myStruct">
+                <cfinvoke  method="getStruct" component="components/task8">
                 <cfdump var="#session.myStruct#">
                 <cfset structClear(form)> 
             </cfif> 

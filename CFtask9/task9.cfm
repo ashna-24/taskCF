@@ -16,7 +16,7 @@
                 </form> 
             </div>
             <cfif structKeyExists(form,'submit')>
-                <cfinvoke method="getStruct" component="components/task9" returnVariable="taskStruct">
+                <cfinvoke method="getStruct" component="components/task9">
                 <cfdump var="#session.myStruct#">
                 <cfif structKeyExists(session, 'count')>
                     The text "#session.val#" is already present. Cannot add again....  

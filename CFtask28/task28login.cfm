@@ -11,7 +11,7 @@
             <cfoutput>
                 <div class="content">
                     <h3 class="login">Login</h3>
-                    <form action="" method="post" name="form" class="form">
+                    <form action="" method="post" name="myform" class="form">
                         User id: <input type="text" name="userName"  class="text userid" id="userName" required="yes"><br>
                         Password: <input type="password" name="password" class="text" id="password" required="yes"><br>
                         <input type="submit" name="submit" value="Login" class="text submit">

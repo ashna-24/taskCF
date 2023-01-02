@@ -35,7 +35,10 @@
                             </div>
                         </div>
                         <div class="userLogout">
-                            <a href="task28login.cfm" class="logout"><input type="submit" value="Logout" name="submit" id="submit" class="Logout"></a><br>
+                            <form method="post" class="logout" name="logout">
+                                <input type="submit" value="Logout" name="submit" id="submit" class="Logout">
+                            </form>
+                            <cfinvoke  method="logoutField" component="components/logout">
                         </div>
                     </div>
                     <script src="assets/jquery.js"></script>
@@ -43,7 +46,7 @@
                     <script src="js/task28.js"></script>
                 <cfelse>
                     <cflocation url="task28login.cfm" addtoken="No">
-                    <cfset StructClear(Session)>
+                    
                 </cfif>
             </cfoutput>
         </div>

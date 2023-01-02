@@ -1,5 +1,5 @@
 <cfcomponent>
-    <cffunction  name="getDetails" access="Remote">
+    <cffunction  name="getDetails" access="remote">
         <cfargument name="password" default="#form.password#">
         <cfargument name="userName" default="#form.userName#">    
         <cfquery name="userLogin" datasource="employee">
@@ -10,7 +10,6 @@
         </cfquery>
         <cfset session.name = userLogin.UserName>
         <cfset session.userRole = userLogin.Role>
-        <cfdump var="#userLogin.recordCount#">
         <cfif userLogin.recordCount>
             <cfif session.userRole=="user">
                 <cfset Session.userFlag = 1>

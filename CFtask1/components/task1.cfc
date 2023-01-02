@@ -1,6 +1,6 @@
 <cfcomponent>
-    <cffunction  name="getNumbers" access="remote" returnType="any">
-        <cfargument  name="text" type="any" default="#form.textinput#">        
+    <cffunction name="getNumbers" access="remote" returnType="any">
+        <cfargument name="text" type="any" default="#form.textinput#">
         <cfif arguments.text eq "1">
             <cfset local.res="Ok">
             <cfreturn local.res>

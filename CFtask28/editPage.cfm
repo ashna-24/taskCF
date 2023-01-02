@@ -8,8 +8,8 @@
     </head>
     <body>
         <cfoutput>
-            <cfif structKeyExists( session,"name")>
-                <form name="form" action="" method="post" class="form">
+            <cfif structKeyExists( session,"adminFlag")>
+                <form name="myform" action="" method="post" class="form">
                     Page Name: <input type="text" name="pagename" id="pagenameid" class="form-control edit" value="#url.name#">
                     Page Description:<textarea name="description" id="descid" class="form-control edit" rows="5">#url.desc#</textarea>
                     <input type="submit" name="edit" id="edit" value="Edit"> 	

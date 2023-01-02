@@ -30,7 +30,7 @@
                                                 </a>
                                             </td>
                                             <td class="adminTr">
-                                                <a href="delete.cfc?method=deletepage&id=#descList.pageid#">
+                                                <a href="components/delete.cfc?method=deletepage&id=#descList.pageid#">
                                                     DELETE
                                                 </a>
                                             </td>
@@ -40,15 +40,15 @@
                                 <a href="addpage.cfm" class="newOne">ADD A NEW PAGE</a>
                             </div>
                             <div class="adminlogout">
-                                <a href="task28login.cfm" class="logout">
+                                <form method="post" class="logout" name="logout">
                                     <input type="submit" value="Logout" name="submit" id="submit" class="Logout">
-                                </a>
+                                </form>
+                                <cfinvoke  method="logoutField" component="components/logout">
                             </div>
                         </div>
                     </div>
                 <cfelse>
                     <cflocation url="task28login.cfm" addtoken="No">
-                    <cfset  StructClear(Session)>
                 </cfif>
             </cfoutput>
         </div>
