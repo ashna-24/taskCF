@@ -1,6 +1,6 @@
 <cfcomponent>
 	<cffunction name="deletepage" access="remote">
-		<cfquery name="delete" datasource="employee">
+		<cfquery name="delete">
 			DELETE 
             FROM pagesDtl
 			WHERE pageid= <cfqueryparam value="#url.id#" cfsqltype="CF_SQL_VARCHAR">

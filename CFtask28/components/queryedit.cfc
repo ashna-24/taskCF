@@ -1,6 +1,6 @@
 <cfcomponent>
     <cffunction  name="getEditQuery" access="remote" returnType="any">
-        <cfquery name="edit" datasource="employee">
+        <cfquery name="edit">
             UPDATE pagesDtl
             SET pagename=<cfqueryparam value="#form.pagename#" cfsqltype="cf_sql_varchar">, 
                 pagedescs=<cfqueryparam value="#form.description#" cfsqltype="cf_sql_varchar">

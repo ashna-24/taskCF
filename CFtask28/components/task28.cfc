@@ -2,7 +2,7 @@
     <cffunction  name="getDetails" access="remote">
         <cfargument name="password" default="#form.password#">
         <cfargument name="userName" default="#form.userName#">    
-        <cfquery name="userLogin" datasource="employee">
+        <cfquery name="userLogin">
             SELECT Role,UserName
             FROM loginDtl
             WHERE UserId = <cfqueryparam value="#arguments.userName#" cfsqltype="cf_sql_varchar">
